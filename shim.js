@@ -10,7 +10,9 @@ const STARTER={"lists/main/items":{
   d2:{pid:"s02",qty:1,at:2,by:ME},
   d3:{pid:"s05",qty:1,at:3,by:ME},
   d4:{pid:"s13",qty:1,at:4,by:ME},
-  d5:{pid:"s26",qty:1,at:5,by:ME}}};
+  d5:{pid:"s26",qty:1,at:5,by:ME}},
+ favs:{s01:{at:5},s10:{at:4},s03:{at:3},s05:{at:2}},
+ hist:{s13:{n:5,last:Date.now()-864e5},s26:{n:3,last:Date.now()-2*864e5},s02:{n:4,last:Date.now()-3*864e5}}};
 if(!overlay.__init){overlay=Object.assign({__init:1},STARTER);save()}
 function save(){try{localStorage.setItem(LS,JSON.stringify(overlay))}catch(e){console.warn("demo storage full",e)}}
 
